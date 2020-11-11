@@ -1,0 +1,15 @@
+.image {
+    background-image: url('../../../assets/images/jio-logo-optimized-v1.png');
+    height: 36px;
+    width: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.left {
+    width: 97%;
+    float: left;
+}
+.right {
+    width: 3%;
+    float: right;
+}

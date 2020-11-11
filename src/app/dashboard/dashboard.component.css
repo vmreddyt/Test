@@ -1,0 +1,42 @@
+.card {
+  min-height: 153px;
+}
+.card-body {
+    padding: 0px;
+}
+.card-title {
+    background-color: #f2f0f5;
+    padding: 5px;
+}
+.card-text {
+    padding: 11px;
+}
+.three-dots:after {
+    content: '\2807';
+    font-size: 16px;
+    float: right;
+    top: -20px;
+    position: relative;
+    }
+    .devece-info-section {
+        padding: 10px;
+    }
+    .alerts-section{
+        min-height: calc(100vh - 37vh);
+    }
+    .alert-text {
+        background-color: black;
+        color: white;
+        width: 17%;
+        padding: 1%;
+        border-radius: 4%;
+}
+    .map {
+        padding-top: 20px;
+    }
+    agm-map {
+        height: 300px;
+      }
+      .bootom-cards {
+        padding-top: 20px;
+      }

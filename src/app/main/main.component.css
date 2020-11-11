@@ -1,0 +1,12 @@
+.sidenav-section {
+    min-height: calc(100vh - 0vh);
+    background-color:#2c333a;
+}
+.main-section {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+.footer-row {
+    position: absolute;
+    bottom: 0;
+}

@@ -1,0 +1,129 @@
+
+<div class="row">
+    <div class="col-9">
+
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                      <h6 class="card-title">COOLER STATUS (10) <div class="three-dots"></div></h6>
+                      <p class="card-text">
+                          
+                        <ngb-progressbar type="primary" [value]="50"></ngb-progressbar> 
+                      </p>
+                      <div class="devece-info-section">
+                          <span>Offline</span>
+                          <span> Not Instlled</span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                      <h6 class="card-title">DEVICE STATUS (10) <div class="three-dots"></div></h6>
+                      <p class="card-text">
+                        <ngb-progressbar type="primary" [value]="50"></ngb-progressbar> 
+                      </p>
+                      <div class="devece-info-section">
+                        <span>Offline</span>
+                        <span> Not Instlled</span>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                      <h6 class="card-title">ALERT STATUS (0) <div class="three-dots"></div></h6>
+                      <p class="card-text"></p>
+                      <div class="devece-info-section">
+                        <span>No record found</span>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row map">
+            <div class="col-12">
+                <google-map
+                height="300px"
+                width="100%"
+                [zoom]="zoom"
+                [center]="center"
+                [options]="options"
+                (mapClick)="click($event)"
+              >
+                <map-marker
+                  #markerElem
+                  *ngFor="let marker of markers"
+                  [position]="marker.position"
+                  [label]="marker.label"
+                  [title]="marker.title"
+                  [options]="marker.options"
+                  (mapClick)="openInfo(markerElem, marker.info)"
+                >
+                </map-marker>
+              
+                <map-info-window>{{ infoContent }}</map-info-window>
+              </google-map>
+              
+              <button (click)="zoomIn()">Zoom in</button>
+              <button (click)="zoomOut()">Zoom out</button>
+              <button (click)="logCenter()">Log center</button>
+              <button (click)="addMarker()">Add marker</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-3">
+        <div class="card alerts-section">
+                    
+            <div class="card-body">
+              <h6 class="card-title"><div class="alert-text">ALERT </div><div class="three-dots"></div></h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="row bootom-cards">
+    <div class="col-3">
+        <div class="card">
+            
+            <div class="card-body">
+              <h6 class="card-title">COOLER STATUS (10) <div class="three-dots"></div></h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            
+            <div class="card-body">
+              <h6 class="card-title">DEVICE STATUS (10) <div class="three-dots"></div></h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            
+            <div class="card-body">
+              <h6 class="card-title">ALERT STATUS (0) <div class="three-dots"></div></h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            
+            <div class="card-body">
+              <h6 class="card-title">ALERT STATUS (0) <div class="three-dots"></div></h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+</div>

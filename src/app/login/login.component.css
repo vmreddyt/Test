@@ -1,0 +1,14 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 741px;
+    background-color: DodgerBlue;
+   }
+  
+  .flex-container>div {
+    background-color: white;
+    width: 500px;
+    height: 415px;
+    border-radius: 24px;
+  }
