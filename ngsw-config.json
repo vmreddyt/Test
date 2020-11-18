@@ -31,5 +31,20 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "posts",
+      "urls": [
+        "http:/dfsdf.php"
+      ],
+      "version": 1,
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "6h",
+        "timeout": "10s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
