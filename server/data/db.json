@@ -1,0 +1,20 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "text": "This is a comment."
+    },
+    {
+      "id": 2,
+      "text": "This is a second comment."
+    },
+    {
+      "id": 3,
+      "text": "Test"
+    },
+    {
+      "id": 4,
+      "text": "Test 123"
+    }
+  ]
+}

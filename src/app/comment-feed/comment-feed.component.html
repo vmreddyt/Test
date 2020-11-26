@@ -1,0 +1,18 @@
+<div class="comment-feed">
+  <h2>Comment Feed</h2>
+
+  <form [formGroup]="myForm">
+    <button (click)="resetCommentFeed()" class="reset-btn">Reset comment feed</button>
+    <div class="search-section">
+
+      <input type="text" placeholder="search commet" formControlName="searchCommentData">
+    </div>
+    <div class="comment-list" *ngFor="let comment of comments">
+      <span class="close-icon" (click)="deleteComment(comment.id)">x</span> <span>{{comment.text}}</span>
+    </div>
+
+    <input type="text" (blur)="addComment($event.target.value)" formControlName="addCommentData"
+      placeholder="Add comment"> <span class="reply-button">Reply</span>
+
+  </form>
+</div>
