@@ -26,12 +26,22 @@ export class CommentFeedComponent implements OnInit {
     this.myForm.get('searchCommentData').valueChanges.pipe(
       debounceTime(500),
       distinctUntilChanged(),
+      // retry(3)
+      // retryWhen()
       switchMap((data) => this.commentService.searchComment(data)),
       shareReplay()
       ).subscribe((result) =>  {
         this.comments = [];
         this.comments = result;
       });
+
+      // this._appService
+      // .getData(500)
+      // .pipe(
+      //   retryWhen(genericRetryStrategy()),
+      //   catchError(error => of(error))
+      // )
+      // .subscribe(console.log);
   }
 
   /*
