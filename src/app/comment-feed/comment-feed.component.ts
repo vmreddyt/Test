@@ -68,6 +68,31 @@ export class CommentFeedComponent implements OnInit {
 // from([1,2,3,4]).pipe(
 //   mergeMap(param => getData(param))
 // ).subscribe(val => console.log(val));
+// https://medium.com/@luukgruijs/understanding-rxjs-map-mergemap-switchmap-and-concatmap-833fc1fb09ff
+//  ConcatMap
+// The last example is concatMap. As you might expect, concatMap also subscribes to the inner Observable for you. But unlike switchMap, that unsubscribes from the current Observable if a new Observable comes in, concatMap will not subscribe to the next Observable until the current one completes. The benefit of this is that the order in which the Observables are emitting is maintained. To demonstrate this:
+//   const getData = (param) => {
+//   const delayTime = Math.floor(Math.random() * 10000) + 1;
+//   return of(`retrieved new data with params: ${param} and delay: ${delayTime}`).pipe(
+//     delay(delayTime)
+//   )
+// }
+
+// // using a regular map
+// from([1,2,3,4]).pipe(
+//   map(param => getData(param))
+// ).subscribe(val => val.subscribe(data => console.log('map:', data)));
+
+// // using mergeMap
+// from([1, 2, 3 ,4]).pipe(
+//   mergeMap(param => getData(param))
+// ).subscribe(val => console.log('mergeMap:', val));
+
+// // using concatMap
+// from([1, 2, 3 ,4]).pipe(
+//   concatMap(param => getData(param))
+// ).subscribe(val => console.log('concatMap:', val));
+
 
   /*
   * Intiale form
