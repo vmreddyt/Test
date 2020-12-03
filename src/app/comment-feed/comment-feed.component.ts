@@ -61,6 +61,8 @@ export class CommentFeedComponent implements OnInit {
 //   map(param => getData(param)),
 //   mergeAll()
 // ).subscribe(val => console.log(val));
+  
+ // You might also have heard about flatMap. FlatMap is an alias of mergeMap and behaves in the same way. Don’t get confused there!
 
 // // using mergeMap
 // from([1,2,3,4]).pipe(
